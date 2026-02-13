@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flowers for Bebi</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- MUSIC CARDS -->
+<div class="poem-container">
+
+  <!-- CARD 1 : ROSE -->
+  <div class="poem-card" id="music-0">
+    <h3 class="flower-title">♡ Rose ♡ </h3>
+
+    <img src="rose.png" alt="Flower" class="flower-img"
+    >
+        <div class="flower-desc"> 
+    <p>The way you love is just like the rose. You love deeply and passionately. I am so lucky to be loved by you!</p>
+        </div>
+</div>
+
+  <!-- CARD 2 : LAVENDER -->
+  <div class="poem-card" id="music-0">
+    <h3 class="flower-title">♡ Lavender ♡ </h3>
+
+    <img src="lavender.png" alt="Flower" class="flower-img"
+    >
+<div class="flower-desc"> 
+    <p>
+        You are like the lavender flower, you are so calming and soothing. I feel at ease whenever I am with you. You are my safe haven.
+    </p>
+</div>
+</div>
+    
+  <!-- CARD 3 : SUNFLOWER -->
+  <div class="poem-card" id="music-0">
+    <h3 class="flower-title">♡ Sunflower ♡ </h3>
+
+    <img src="sunflower.png" alt="Flower" class="flower-img"
+    >
+<div class="flower-desc"> 
+    <p>
+        You are like the sunflower, you are so bright and cheerful. You always know how to make me smile and laugh. You are my sunshine on a cloudy day.
+    </p>
+</div>
+  </div>
+
+  <!-- CARD 4 : BELLFLOWER -->
+  <div class="poem-card" id="music-0">
+    <h3 class="flower-title">♡ Bellflower ♡ </h3>
+
+    <img src="bellflower.png" alt="Flower" class="flower-img"
+    >
+<div class="flower-desc"> 
+    <p>
+       You notice the little things, care deeply, and inspire me to see the beauty in the world around us. I am thankful for you everyday bebi!
+    </p>
+</div>
+</div>
+
+<!-- CARD 5 : CAMELIA -->
+  <div class="poem-card" id="music-0">
+    <h3 class="flower-title">♡ Camelia ♡ </h3>
+
+    <img src="camelia.png" alt="Flower" class="flower-img"
+    >
+<div class="flower-desc"> 
+    <p>
+        You protect me and my heart like the camelia flower. You are so caring and nurturing. You always make me feel loved through your actions.
+    </p>
+</div>
+</div>
+
+<!-- CARD 6 : LILY -->
+  <div class="poem-card" id="music-0">
+    <h3 class="flower-title">♡ Lily ♡ </h3>
+
+    <img src="lily.png" alt="Flower" class="flower-img"
+    >
+<div class="flower-desc"> 
+    <p>Your love and care feel sacred, your presence brings calm, and your heart sees beauty in every small thing. I love it about you bebi!</p>
+        
+</div>
+</div>
+
+
+<!-- CARD & : Bundle -->
+  <div class="poem-card" id="music-0">
+    <img src="bundle.png" alt="Flower" class="flower-img"
+    >
+<div class="flower-desc"> 
+    <p>These flowers speaks how beautiful you are as person. Each flower carries all the love, care, and warmth I feel for you. Each bloom whispers calm, happiness, and loyalty, coming together to say how deeply you are loved and cherished. I love you so much bebi!</p>
+        
+</div>
+</div>
+
+</div>
+<!-- NAVIGATION -->
+<div class="poem-buttons">
+  <button id="prev" class="p-btn"><</button>
+  <button id="next" class="p-btn">></button>
+</div>
+
+<div class="home">
+  <a href="start.html" class="btn">Done</a>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.poem-card');
+let current = 0;
+
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.style.display = i === index ? 'flex' : 'none';
+  });
+}
+
+showCard(current);
+
+document.getElementById('prev').addEventListener('click', () => {
+  current = (current - 1 + cards.length) % cards.length;
+  showCard(current);
+});
+
+document.getElementById('next').addEventListener('click', () => {
+  current = (current + 1) % cards.length;
+  showCard(current);
+});
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For you bebi!💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- POEM CARDS -->
+  <div class="poem-container">
+
+    <!-- Card 1 -->
+    <div class="poem-card" id="card-0">
+      <h2 class="poem-title"><i>F</i>eelings, Undenied</h2>
+      <p><b>I</b> cannot fathom how things turned out this way.</p>
+      <p><b>L</b>iking you is one thing, but loving you is another.</p>
+      <p><b>O</b>ver and over I ask myself,</p>
+      <p><b>V</b>oices in my head keeps telling me to stop.</p>
+      <p><b>E</b>ven with all that, I know for sure.</p>
+      <p><b>Y</b>ou are indeed someone I fancy.</p>
+      <p><b>O</b>ver and over I swore to the moon and star,</p>
+      <p><b>U</b>nderneath the starry sky I’ll love you with all my heart.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="poem-card" id="card-1">
+      <h2 class="poem-title"><i>R</i>oses in the Moonlight</h2>
+      <p>
+        A bud of light flourished into something great,<br>
+        Started as friendship now something more.<br>
+        Confused and afraid with an empty plate,<br>
+        Now filled with warmth with an open door.
+      </p>
+      <p>
+        I step back as I deny myself,<br>
+        But the moon and stars told me otherwise.<br>
+        Like a book left untouched on the bookshelf,<br>
+        Once touched and you’ll become wise.
+      </p>
+      <p>
+        Tall and thick walls were built out of fear,<br>
+        In purpose of protecting my once fragile heart.<br>
+        Walls now open and I can see it clear,<br>
+        What it really meant to see a true art.
+      </p>
+      <p>
+        It was you who revived once dead lovergirl,<br>
+        Met with a bond as precious as pearl.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="poem-card" id="card-2">
+      <h2 class="poem-title"><i>A</i>ll or Nothing</h2>
+      <p>
+        If my love for you ruins me, so be it.<br>
+        My heart yearns heavily like you’re all I need.<br>
+        You slide into my broken pieces like you were meant to fit.
+      </p>
+      <p>
+        You set my heart ablaze and my nightmares lit.<br>
+        Burned and discarded every warning I intend to read.<br>
+        If my love for you ruins me, so be it.
+      </p>
+      <p>
+        Slowly filling my empty cup bit by bit,<br>
+        My love for you feels like hunger no one else could feed.<br>
+        You slide into my broken pieces like you were meant to fit.
+      </p>
+      <p>
+        Ripping my heart open I must commit,<br>
+        For I have planted my lover’s seed.<br>
+        If my love for you ruins me, so be it.
+      </p>
+      <p>
+        I am impulsive and obsessed I must admit,<br>
+        Though I am certain that my love for you is true indeed.<br>
+        You slide into my broken pieces like you were meant to fit.
+      </p>
+      <p>
+        My love commits to flames where shadows sit,<br>
+        Your gaze feeds the fire I cannot concede.<br>
+        If my love for you ruins me, so be it.<br>
+        You slide into my broken pieces like you were meant to fit.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="poem-card" id="card-3">
+      <h2 class="poem-title"><i>N</i>ot a Love Confession</h2>
+      <p>
+        This is not a love confession,<br>
+        But you’re already part of my daily life.<br>
+        The constant messages and gaming sessions.<br>
+        It’s something I look forward to everyday.
+      </p>
+      <p>
+        This is not a love confession,<br>
+        But I saw something unexpected.<br>
+        How a broken soul be so beautiful.<br>
+        A bittersweet beauty indeed.
+      </p>
+      <p>
+        This is not a love confession,<br>
+        Yet you’ve shown me colors,<br>
+        Colors I haven’t seen before.<br>
+        Unanticipated, unpredicted.
+      </p>
+      <p>
+        This is not a love confession,<br>
+        But you gave me warmth,<br>
+        You made me smile.<br>
+        You are my happy pill indeed.
+      </p>
+    </div>
+
+  </div> <!-- end of poem-container -->
+
+  <!-- NAVIGATION BUTTONS -->
+  <div class="poem-buttons">
+    <button id="prev" class="p-btn"><</button>
+    <button id="next" class="p-btn">></button>
+  </div>
+
+  <div class="home">
+    <a href="start.html" class="btn">Done</a>
+  </div>
+
+<script>
+const cards = document.querySelectorAll('.poem-card');
+let current = 0;
+
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.style.display = i === index ? 'block' : 'none';
+  });
+}
+
+// Show first card on load
+showCard(current);
+
+// Button functionality
+document.getElementById('prev').addEventListener('click', () => {
+  current = (current - 1 + cards.length) % cards.length;
+  showCard(current);
+});
+
+document.getElementById('next').addEventListener('click', () => {
+  current = (current + 1) % cards.length;
+  showCard(current);
+});
+</script>
+
+</body>
+
+
+</html>

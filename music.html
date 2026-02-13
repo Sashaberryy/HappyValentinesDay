@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music for You 🎶</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- MUSIC CARDS -->
+<div class="poem-container">
+
+  <!-- CARD 1 : MP3 PLAYER -->
+  <div class="poem-card" id="music-0">
+    <h3 class="music-title">♡ ♡ ♡ </h3>
+
+    <img 
+      src="MOO.png"
+      alt="Music Cover"
+      class="music-img"
+    >
+    <audio controls class="music-player">
+      <source src="Nothing.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    
+  </div>
+
+  <!-- CARD 2 : IMAGE + MUSIC CONTROLS -->
+  <div class="poem-card" id="music-1">
+    <h3 class="music-title">‧₊˚♪  I also made playlist! ♪ ˚⊹</h3>
+
+    <img 
+      src="shy.png"
+      alt="Spotify"
+      class="music-img"
+    >
+<div class="home">
+  <a href="https://open.spotify.com/playlist/0WIaAy0LMTwdBQooGVQ4Y6?si=VSp6ekQpSBCpqvJ9yIUkmw" class="cute-btn">Click Here!</a>
+</div>
+  </div>
+
+</div>
+
+<!-- NAVIGATION -->
+<div class="poem-buttons">
+  <button id="prev" class="p-btn"><</button>
+  <button id="next" class="p-btn">></button>
+</div>
+
+<div class="home">
+  <a href="start.html" class="btn">Done</a>
+</div>
+
+<script>
+const cards = document.querySelectorAll('.poem-card');
+let current = 0;
+
+function showCard(index) {
+  cards.forEach((card, i) => {
+    card.style.display = i === index ? 'flex' : 'none';
+  });
+}
+
+showCard(current);
+
+document.getElementById('prev').addEventListener('click', () => {
+  current = (current - 1 + cards.length) % cards.length;
+  showCard(current);
+});
+
+document.getElementById('next').addEventListener('click', () => {
+  current = (current + 1) % cards.length;
+  showCard(current);
+});
+</script>
+
+</body>
+
+</html>

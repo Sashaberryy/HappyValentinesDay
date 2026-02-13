@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Valentine's Day ❤</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="heart">❤</div>
+    <img src="cat.png" alt="Valentine image" class="card-img">
+  </header>
+
+  <h3 class="title">Happy Valentine's Day Bebi!!!</h3>
+
+  <a href="start.html" class="btn">Start</a>
+
+
+
+  <!-- Smooth Page Transition Script -->
+  <script>
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location = this.href;
+        }, 500);
+      });
+    });
+  </script>
+
+</body>
+</html>
